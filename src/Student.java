@@ -1,7 +1,7 @@
 /**
  * Class to create Student Object
  */
-class Student implements Comparable<Student> {
+public class Student implements Comparable<Student> {
 	// Instance variables`
 	private String stuNum;
 	private String stuFName;
@@ -15,7 +15,7 @@ class Student implements Comparable<Student> {
 	 *  - Student Last Name
 	 *  - Student Full Name
 	 * 
-	 * @param studentDetails
+	 * @param studentDetails String containing Student ID, first name and last name
 	 */
 	public Student(String studentDetails){
 		String student[] = studentDetails.split(" ");
@@ -28,8 +28,8 @@ class Student implements Comparable<Student> {
 	/**
 	 * Student Dummy Construtor to create a Student Object with only StudentID
 	 * 
-	 * @param studentID
-	 * @param dummy
+	 * @param studentID student's student ID
+	 * @param dummy dummy param 
 	 */
 	public Student(String studentID, String dummy){
 		this.stuNum = studentID;
@@ -56,12 +56,8 @@ class Student implements Comparable<Student> {
 	/**
 	 * Method to compare Student Object with other Student Object
 	 * 
-	 * @param other
-	 * @return int(
-	 * 		>1 if this > other
-	 * 		0 if this == other
-	 * 		<1 if this < other
-	 * )
+	 * @param other Student objects you're comparing to
+	 * @return int
 	 */
 	public int compareTo(Student other) {
 		return this.stuNum.compareTo(other.stuNum);
