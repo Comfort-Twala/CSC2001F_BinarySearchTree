@@ -10,6 +10,11 @@ class AccessArrayApp {
 	private static ArrayApp arrayApp;
 
 	public static void main(String[] args) throws FileNotFoundException{
-		
+		arrayApp = new ArrayApp();
+		if (args.length == 0){
+			arrayApp.printAllStudents();
+		} else {
+			System.out.println(arrayApp.printStudent(args[0]));
+		}	
 	}
 }
