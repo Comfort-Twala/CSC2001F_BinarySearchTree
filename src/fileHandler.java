@@ -21,8 +21,8 @@ class fileHandler {
 	/**
 	 * Constructor to create fileHandler and assign values to instance variables
 	 * 
-	 * @param file
-	 * @throws FileNotFoundException
+	 * @param file file that needs to be opened
+	 * @throws FileNotFoundException when file cannot be found
 	 */
 	public fileHandler(String file) throws FileNotFoundException{
 		this.rawData = new Student[5000];
@@ -33,7 +33,7 @@ class fileHandler {
 	/**
 	 * Method to populate a data structure with data from file depending which data structure type it is
 	 * 
-	 * @param type
+	 * @param type type of datastructure the method needs to populate
 	 */
 	private void populate(String type){
 		Student student;
