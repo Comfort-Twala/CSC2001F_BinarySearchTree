@@ -7,6 +7,7 @@ import java.io.FileNotFoundException;
  * @version 1.0
  */
 class ArrayApp {
+    // Instance variables
     private Student[] datalist;
     private fileHandler file;    
     
@@ -29,7 +30,9 @@ class ArrayApp {
 
 	}
 
-	
+	/**
+	 * Method to print all student details within the array  
+	 */	
 	public void printAllStudents(){
 		
 	}
