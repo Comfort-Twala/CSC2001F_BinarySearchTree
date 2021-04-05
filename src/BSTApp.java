@@ -17,7 +17,8 @@ class BSTApp {
 	 * @throws FileNotFoundException
 	 */
     public BSTApp() throws FileNotFoundException{
-
+        file = new fileHandler("data/oklist.txt");
+        tree = file.dataTree();
     }
 
 	/**
@@ -27,13 +28,17 @@ class BSTApp {
 	 * @return Student name belonging to studentID.
 	 */
     public String printStudent(String studentID) {
-        
+        Student student = new Student(studentID, "temp");
+        if (tree.find(student) != null){
+            return tree.find(student).data.fullName();
+        }
+		return "Access Denied!";       
     }	
 
 	/**
 	 * Method to print all student details within the BinarySearchTree  
 	 */	
     public void printAllStudents() {
-
+		tree.inOrder();
 	}
 }
