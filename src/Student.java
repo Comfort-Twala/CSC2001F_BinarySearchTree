@@ -18,7 +18,11 @@ class Student implements Comparable<Student> {
 	 * @param studentDetails
 	 */
 	public Student(String studentDetails){
-
+		String student[] = studentDetails.split(" ");
+		this.stuNum = student[0];
+		this.stuFName = student[1];
+		this.stuLName =  student[2];
+		this.fullName = this.stuFName.concat(" " + this.stuLName);
 	}
 
 	/**
@@ -28,7 +32,7 @@ class Student implements Comparable<Student> {
 	 * @param dummy
 	 */
 	public Student(String studentID, String dummy){
-
+		this.stuNum = studentID;
 	}
 
 	/**
@@ -37,7 +41,7 @@ class Student implements Comparable<Student> {
 	 * @return stuNum
 	 */
 	public String studentNum(){
-
+		return this.stuNum;
 	}
 
 	/**
@@ -46,7 +50,7 @@ class Student implements Comparable<Student> {
 	 * @return fullName
 	 */
 	public String fullName(){
-
+		return this.fullName;
 	}
 
 	/**
@@ -60,13 +64,13 @@ class Student implements Comparable<Student> {
 	 * )
 	 */
 	public int compareTo(Student other) {
-		
+		return this.stuNum.compareTo(other.stuNum);
 	}
-
+	
 	/**
 	 * Method to return String representation of Student Object
 	 */
 	public String toString(){
-
+		return this.stuNum + " " + this.fullName;
 	}
 }
