@@ -17,7 +17,8 @@ class ArrayApp {
 	 * @throws FileNotFoundException
 	 */
     public ArrayApp() throws FileNotFoundException{
-
+        file = new fileHandler("data/oklist.txt");
+        datalist = file.dataArray();
     }
 
 	/**
@@ -27,13 +28,20 @@ class ArrayApp {
 	 * @return Student name belonging to studentID.
 	 */
     public String printStudent(String studentID){
-
+		for (Student student: this.datalist){
+			if (student.studentNum().equals(studentID)){
+				return student.fullName(); 
+			}
+		}
+		return "Access Denied!";
 	}
 
 	/**
 	 * Method to print all student details within the array  
 	 */	
 	public void printAllStudents(){
-		
+		for (Student student: this.datalist){
+			System.out.println(student);
+		}	
 	}
 }
