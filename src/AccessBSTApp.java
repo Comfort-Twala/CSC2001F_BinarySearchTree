@@ -10,6 +10,11 @@ class AccessBSTApp {
 	private static BSTApp bstApp;
 
 	public static void main(String[] args) throws FileNotFoundException{
-
+		bstApp = new BSTApp();
+		if (args.length == 0){
+			bstApp.printAllStudents();
+		} else {
+			System.out.println(bstApp.printStudent(args[0]));
+		}
 	}	
 }
