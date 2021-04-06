@@ -35,3 +35,11 @@ $ make experiment
 ```
 $ make clean-exp
 ```
+### run Analysis
+```
+$ make analyse
+```
+### clean Analysis
+```
+$ make clean-analysis
+```

@@ -39,4 +39,10 @@ experiment:
 		$(PYTHON) $(SCRIPTDIR)/experiment.py 
 
 clean-exp:
-		$(RM) data/experiment/*
+		$(RM) data/experiment/*.txt
+
+analyse:
+		$(PYTHON) $(SCRIPTDIR)/analyser.py
+
+clean-analysis:
+		$(RM) data/experiment/analysis/*
