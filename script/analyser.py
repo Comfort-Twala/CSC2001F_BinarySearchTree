@@ -8,7 +8,7 @@ Python script to:
 
 def main():
     for data_struc in ["Array", "BST"]:
-        for n in range(500, 5001, 500):
+        for n in range(500, 2001, 500):
             expfile = open_expfile(f'data/experiment/{data_struc}_subset_n_{n}.txt')
             valueList = count_val(expfile)
             recordData(best_case(valueList), worst_case(valueList), average(valueList), data_struc, n)
@@ -59,13 +59,13 @@ def recordData(min, max, avr, type, n):
     Function that takes in minimum, maximum and average for count and writes it to a file.
     """
     with open(f'data/experiment/analysis/{type}_n_{n}.txt', 'w') as f:
-        f.write(f"Analysis of {type}App when n is {n}:")
+        f.write(f"Analysis of {type}App when n is {n}:\n")
         f.write("Minimum (Best Case):\n")
-        f.write(min, '\n')
+        f.write(f'{min}\n')
         f.write("Maximum (Worst Case):\n")
-        f.write(max, '\n')
+        f.write(f'{max}\n')
         f.write("Average:\n")
-        f.write(avr)
+        f.write(f'{avr}')
         f.close()
 
 if __name__ == "__main__":
