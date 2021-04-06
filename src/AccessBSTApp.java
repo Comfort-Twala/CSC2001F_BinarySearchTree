@@ -15,6 +15,7 @@ public class AccessBSTApp {
 			bstApp.printAllStudents();
 		} else {
 			System.out.println(bstApp.printStudent(args[0]));
+			System.out.println(bstApp.opCounter());
 		}
 	}	
 }

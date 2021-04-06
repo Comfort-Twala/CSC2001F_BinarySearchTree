@@ -17,8 +17,8 @@ public class BSTApp {
 	 * @throws FileNotFoundException
 	 */
     public BSTApp() throws FileNotFoundException{
-        file = new fileHandler("data/oklist.txt");
-        tree = file.dataTree();
+        this.file = new fileHandler("data/oklist.txt");
+        this.tree = file.dataTree();
     }
 
 	/**
@@ -40,5 +40,14 @@ public class BSTApp {
 	 */	
     public void printAllStudents() {
 		tree.inOrder();
+	}
+
+	/**
+	 * Method to return number of operations performed when searching through BST
+	 * 
+	 * @return opCount number of opertions performed by BST find method
+	 */
+	public int opCounter(){
+		return tree.opCounter();
 	}
 }
