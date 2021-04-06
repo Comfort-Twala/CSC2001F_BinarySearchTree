@@ -15,12 +15,34 @@ import matplotlib.pyplot as plt
 import random
 
 
-def main(app):
+def main():
     """
     Main method to run expiriment.
     paramenter - App on which to run the experiment on.
     """
-    pass
+    for n in range(500, 5001, 500):
+        subset = create_subset(n)
+        runArray(subset)
+        runBST(subset)
+
+def runArray(subset):
+    """
+    Function to run AccessArrayApp on every value in subset and write the results into file Array_subset_{n}.txt
+    """
+    with open(f'data/experiment/Array_subset_n_{len(subset)}.txt', 'w') as f:
+        for detail in subset:
+            id = detail.split(" ")[0]
+            os.system(f"make runArray ID={id} >> {f.name}")
+
+
+def runBST(subset):
+    """
+    Function to run AccessBSTApp on every value in subset and write the results into file BST_subset_{n}.txt
+    """        
+    with open(f'data/experiment/BST_subset_n_{len(subset)}.txt', 'w') as f:
+        for detail in subset:
+            id = detail.split(" ")[0]
+            os.system(f"make runBST ID={id} >> {f.name}")
 
 def create_subset(n):
     """
@@ -40,7 +62,7 @@ def open_datafile():
     opens datafile and returns a datalist (sample data) 
     """
     datalist = []
-    with open('../data/oklist.txt', 'r') as data:
+    with open('data/oklist.txt', 'r') as data:
         for entry in data:
             datalist.append(entry)
         data.close()
