@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
  * @author TWLCOM001 - Comfort Twala 
  * @version 1.0
  */
-class AccessBSTApp {
+public class AccessBSTApp {
 	private static BSTApp bstApp;
 
 	public static void main(String[] args) throws FileNotFoundException{

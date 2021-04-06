@@ -12,7 +12,7 @@ import java.util.Scanner;
  * @author TWLCOM001 - Comfort Twala
  * @version 1.0
  * */
-class fileHandler {
+public class fileHandler {
 	//Instance variables
 	private Student[] rawData; 
 	private BinarySearchTree<Student> tree;

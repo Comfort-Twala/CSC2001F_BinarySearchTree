@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
  * @author TWLCOM001 - Comfort Twala
  * @version 1.0
  */
-class ArrayApp {
+public class ArrayApp {
     // Instance variables
     private Student[] datalist;
     private fileHandler file;    

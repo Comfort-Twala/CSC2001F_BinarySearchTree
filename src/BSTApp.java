@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
  * @author TWLCOM001 - Comfort Twala
  * @version 1.0
  */
-class BSTApp {
+public class BSTApp {
     // Instance variables
     private fileHandler file;
     private BinarySearchTree<Student> tree;
