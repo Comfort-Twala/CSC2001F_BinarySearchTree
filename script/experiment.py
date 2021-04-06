@@ -26,7 +26,8 @@ def create_subset(n):
     """
     Create a subset of n entries from sample data
     """
-    pass
+    sample_data = open_datafile()
+    return random.sample(sample_data, n)
 
 def count_values(count):
     """
@@ -36,9 +37,14 @@ def count_values(count):
 
 def open_datafile():
     """
-    opens datafile
+    opens datafile and returns a datalist (sample data) 
     """
-    pass
+    datalist = []
+    with open('../data/oklist.txt', 'r') as data:
+        for entry in data:
+            datalist.append(entry)
+        data.close()
+    return datalist
 
 
 if __name__ == "__main__":
