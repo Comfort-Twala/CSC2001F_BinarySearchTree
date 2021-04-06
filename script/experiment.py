@@ -51,12 +51,6 @@ def create_subset(n):
     sample_data = open_datafile()
     return random.sample(sample_data, n)
 
-def count_values(count):
-    """
-    Add value of counter to dictionary
-    """
-    pass
-
 def open_datafile():
     """
     opens datafile and returns a datalist (sample data) 
@@ -70,4 +64,4 @@ def open_datafile():
 
 
 if __name__ == "__main__":
-    pass
+    main()

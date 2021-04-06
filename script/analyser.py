@@ -8,7 +8,7 @@ Python script to:
 
 def main():
     for data_struc in ["Array", "BST"]:
-        for n in range(500, 2001, 500):
+        for n in range(500, 5001, 500):
             expfile = open_expfile(f'data/experiment/{data_struc}_subset_n_{n}.txt')
             valueList = count_val(expfile)
             recordData(best_case(valueList), worst_case(valueList), average(valueList), data_struc, n)
