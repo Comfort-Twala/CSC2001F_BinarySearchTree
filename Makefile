@@ -4,10 +4,12 @@
 JAVA=/usr/bin/java
 JAVAC=/usr/bin/javac
 JAVADOC=/usr/bin/javadoc
+PYTHON=/usr/bin/python3
 .SUFFIXES: .java .class
 SRCDIR=src
 BINDIR=bin
 DOCDIR=doc
+SCRIPTDIR=script
 
 $(BINDIR)/%.class:$(SRCDIR)/%.java
 		$(JAVAC) -d $(BINDIR)/ -cp $(BINDIR) $<
@@ -30,5 +32,11 @@ runBST: $(CLASS_FILES)
 docs:
 		$(JAVADOC) -d $(DOCDIR) $(SRCDIR)/*
 
-cleanDocs:
+clean-doc:
 		rm -r $(DOCDIR)/*
+
+experiment:
+		$(PYTHON) $(SCRIPTDIR)/experiment.py 
+
+clean-exp:
+		$(RM) data/experiment/*

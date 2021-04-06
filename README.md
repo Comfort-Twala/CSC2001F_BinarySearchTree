@@ -2,7 +2,6 @@
 ## Comparing a Binary Search Tree to an Array through searching
 
 ### Build
-
 ```unix
 $ make
 ```
@@ -19,4 +18,20 @@ $ make runArray ID=<studentID>
 ```
 $ make runBST
 $ make runBST ID=<studentID>
+```
+### generate Javadocs
+```
+$ make docs
+```
+### clean Javadocs
+```
+$ make clean-doc
+```
+### run Experiment
+```
+$ make experiment
+```
+### clean Experiment
+```
+$ make clean-exp
 ```
