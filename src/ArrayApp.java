@@ -9,7 +9,8 @@ import java.io.FileNotFoundException;
 public class ArrayApp {
     // Instance variables
     private Student[] datalist;
-    private fileHandler file;    
+    private fileHandler file;
+	private int opCount;    
     
 	/**
 	 * Constructor to craete and assign values to ArrayApp
@@ -17,8 +18,9 @@ public class ArrayApp {
 	 * @throws FileNotFoundException
 	 */
     public ArrayApp() throws FileNotFoundException{
-        file = new fileHandler("data/oklist.txt");
-        datalist = file.dataArray();
+        this.file = new fileHandler("data/oklist.txt");
+        this.datalist = file.dataArray();
+		this.opCount = 0;
     }
 
 	/**
@@ -29,6 +31,7 @@ public class ArrayApp {
 	 */
     public String printStudent(String studentID){
 		for (Student student: this.datalist){
+			this.opCount++; //Instrumentation
 			if (student.studentNum().equals(studentID)){
 				return student.fullName(); 
 			}
@@ -43,5 +46,9 @@ public class ArrayApp {
 		for (Student student: this.datalist){
 			System.out.println(student);
 		}	
+	}
+
+	public int opCounter() {
+		return this.opCount;
 	}
 }

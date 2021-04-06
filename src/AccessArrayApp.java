@@ -15,6 +15,7 @@ public class AccessArrayApp {
 			arrayApp.printAllStudents();
 		} else {
 			System.out.println(arrayApp.printStudent(args[0]));
+			System.out.println(arrayApp.opCounter());
 		}	
 	}
 }
