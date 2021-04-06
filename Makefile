@@ -1,11 +1,13 @@
 # Assignment 1 program makefile
 # Comfort Twala
 
-JAVA=java
+JAVA=/usr/bin/java
 JAVAC=/usr/bin/javac
+JAVADOC=/usr/bin/javadoc
 .SUFFIXES: .java .class
 SRCDIR=src
 BINDIR=bin
+DOCDIR=doc
 
 $(BINDIR)/%.class:$(SRCDIR)/%.java
 		$(JAVAC) -d $(BINDIR)/ -cp $(BINDIR) $<
@@ -24,3 +26,9 @@ runArray: $(CLASS_FILES)
 
 runBST: $(CLASS_FILES)
 		$(JAVA) -cp $(BINDIR) AccessBSTApp $(ID)
+
+docs:
+		$(JAVADOC) -d $(DOCDIR) $(SRCDIR)/*
+
+cleanDocs:
+		rm -r $(DOCDIR)/*
