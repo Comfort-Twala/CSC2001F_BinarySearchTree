@@ -43,3 +43,11 @@ $ make analyse
 ```
 $ make clean-analysis
 ```
+### run Stats
+```
+$ make stats
+```
+### clean Stats
+```
+$ make clean-analysis
+```

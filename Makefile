@@ -46,3 +46,9 @@ analyse:
 
 clean-analysis:
 		$(RM) data/experiment/analysis/*
+
+stats:
+		$(PYTHON) $(SCRIPTDIR)/grapher.py
+
+clean-stats:
+		$(RM) data/experiment/results/*
